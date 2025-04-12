@@ -10,7 +10,50 @@
 > 📌 **Note:** This project is built using **NFSv4**, ideal for modern infrastructure with SELinux and firewalld support. If you’re looking for a simpler version compatible with legacy systems, check out the [NFSv3 version here](https://github.com/ahmadsheikhi89/nfs-server-setup).
 
 ---
+🔄 NFSv3 vs NFSv4: Key Differences
 
+Feature
+
+NFSv3
+
+NFSv4
+
+🔐 Security & Identity
+
+Basic (UID/GID only)
+
+Supports strong identity mapping (idmapd)
+
+🔥 Firewall simplicity
+
+Needs multiple ports open
+
+Single port (TCP 2049)
+
+📁 Mount behavior
+
+Absolute paths per export
+
+Relative paths under export root (fsid=0)
+
+🧩 Extra daemons
+
+Needs rpcbind, mountd
+
+Doesn't require mountd
+
+🔐 SELinux interaction
+
+May need more exceptions
+
+Cleaner integration with SELinux
+
+📡 Protocol type
+
+Stateless
+
+Stateful with locking and delegation
+---
 ## ✍️ Author
 **Ahmad Sheikhi**  
 🔗 [GitHub Profile](https://github.com/ahmadsheikhi89)
